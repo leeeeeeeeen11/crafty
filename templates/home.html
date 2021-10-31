@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Template!</title>
+  </head>
+  <body>
+
+    <center>
+    <img src="/static/crafty.jpg" width="300" height="250"></img> 
+    
+    
+    
+    </center>
+    <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: #04AA6D;
+    }
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+    .mySlides {display:none;}
+    </style>
+    </head>
+    <body>
+
+    <ul>
+      <li><a class="active" href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('north') }}">Accessories</a></li>      <li><a href="{{ url_for('south') }}">Pets</a></li>      <li><a href="{{ url_for('center') }}">Decorations</a></li>
+       <li><a href="{{ url_for('contact') }} ">Contact</a></li>
+    </ul>
+    <center><p><h3> Hi! we are here to make trash into something economic and Eco-friendly , and to have some fun!  </h3></p></center>
+    <center>
+    <h2 class="w3-center"></h2>
+
+    <div class="w3-content w3-section" style="max-width:500px">
+      <img class="mySlides" src="https://img.freepik.com/free-vector/diy-creative-workshop_23-2148533160.jpg?size=338&ext=jpg" style="width:100%">
+      <img class="mySlides" src="https://images.squarespace-cdn.com/content/v1/58b56e5cd2b857960a275c83/1553783259013-A3MFN6AE8SBMU5LLSM8N/4+Simple+DIY+Wreath+Ideas+For+Spring?format=1000w" style="width:100%">
+            <img class="mySlides" src="https://i.pinimg.com/originals/cc/53/f7/cc53f7f4b5e66eee28d71ad1dac8106f.jpg" style="width:100%">
+      
+    </div></center>
+
+          <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
+
+    <script src="{{ url_for ('static', filename='js/script.js')}}"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+        <center>
+    <img src="/static/crafty.jpg" width="300" height="250"></img> 
+    
+    
+    
+    </center>
+   <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: #04AA6D;
+    }
+    </style>
+    </head>
+    <body>
+
+    <ul>
+      <li><a class="active" href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('north') }}">Accessories</a></li>      <li><a href="{{ url_for('south') }}">Pets</a></li>      <li><a href="{{ url_for('center') }}">Decorations</a></li>
+      <li><a href="{{ url_for('contact') }} ">Contact</a></li>
+ 
+    </ul>
+  <form action="/create" method="POST">
+    <input type="text" name="fullname" placeholder="Full Name">
+    <br>
+    My Question:
+    <br>
+    <textarea row ="4" cols = "30" name="question" > </textarea><br>
+    <input type="submit" value="Submit">
+</form>
+
+    
+  </body>
+</html>
